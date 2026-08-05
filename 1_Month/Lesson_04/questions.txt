@@ -1,1 +1,25 @@
+LLM questions
 
+1. Nimaga LLM matnni suzlar bilan emas, tokenlarga ajratib urgatilinadi?
+  1. Token bilan word orasida asosiy farq nima?
+  2. Hozirgi kunda LLM da BPE tokenization eng kup ishlatilyapti?
+
+2. Transformer modelida Attention Mechanism nimani bajaradi?
+  1. Agar Attention bumasa, model uzun matn ichida muhim maluotlarni topishida qanday muammolar paydo bulishi mumkin?
+  2. Nimaga Transformer arxitecturesida Attention va MLP qatlamlari birga ishlatiladi?
+
+3. Nimaga hozir LLM da BF16 va AdamW juda kup ishlatiladi?
+  1. BF16 train samaradorligini qanday qilib oshiradi?
+  2. AdamW oddiy Adam optimizer dan qanday farq qiladi?
+
+4. Floating Point nima?
+  1. Floating Point LLM train qilishda nima uchun muhim hisoblanadi?
+  2. FP32, FP16 va BF16 orasida asosiy farq nimada?
+
+5. Embeddings nima va LLM da nima uchun ishlatiladi?
+  1. Embedding bilan One-Hot Encoding orasidagi qanday farqlar bor?
+  2. Nimaga Embedding tokenlarning mantdagi tartibini bilmaydi?
+
+6. Local LLM nima
+  1. Qanday holarlarda Cloud-based LLM ga qaraganda Local LLM ishlatish foydaliroq buladi?
+  2. Nimaga Local LLM ni ishga tushirish uchun ancha kuchli GPU kerak buladi?
