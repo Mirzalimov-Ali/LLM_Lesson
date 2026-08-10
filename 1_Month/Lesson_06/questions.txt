@@ -1,0 +1,51 @@
+LLM da Layer nima?
+  -> input malumotni outputgacha chiqarish uchun kerak bulgan turli matematik amallarini tuplami. 
+
+Vocabulary va Tokenizationni farqi nima?
+  -> tokenization - matni qisqa parchalarga yani tokenlarga ajratish
+     vocabulary - tokenization dan ishlab chiqarilgan tokenlarni unique ID ga uzgartiradi. yani har bir token uchun uzini mahsus ID buladi
+
+Tokenization nima va uning qanday turlari bor?
+  -> Tokenization - textni qism parchalarga ajratish. u parchalarni token deb ataymiz. uni bir nehcta turlari bor. byte tokenization, BPE, character tokenization, whole word tokenization
+
+Layer qanday sublayerlardan tashkil topgan?
+  -> asosiy 2 ta sublayerlardan tashkil topgan. ular attention layer bilan feed-forward network layer
+
+Attention va FFN farqi?
+  -> attention layer tokenlarni bogliqligi buyicha ishlaydi. a FFN esa har bir tokenni alohida qayta ishlab chiqadi. va bu logic tomon buyicha ishlaydi
+
+Activation function nima va qanday turlari bor?
+  -> NN ga non-linearity qushish vazifasini bajaradi. Relu, GELU, SwiGLU (modern), GEGLU turlari bor
+
+LLM model Architecturasi ni tushuntirib bering?
+  -> input - tokenization - vocabulary - embeddings - RoPE - Normalization (RMSNorm) - Attention layer (GQA) - FFN layer (SwiGLU) - Training - Output
+
+Encoding va Embeddingsni farqi?
+  -> encoding bu shunchaki manosiz raqamga convert qiladi. a embeddings esa manoga qarab va uzi uqigan holda raqamga convert qiladi. shuning uchun LLM da embeddings yaxshi
+
+Trades off nima?
+  -> modelni bir hususiyati kuchaysa, boshqa hususiyati pasayish holat
+
+Qanday xolatlarda model to’xtab qoladi(buzilib qoladi)
+  -> GPU out of memory bulsa, a bu esa biz architecture variantslardan yaxshi foydalana ololmasek buladi. shuning uchun MHA, MQA, GQA lardan yaxshi foydalanish kerak
+
+Attention va Attention layer orasidagi farq?
+  -> attention - tokenlar orasidagi bogliqnikni hisoblaydigon mechanism. a attention layer esa bu kattaroq va attentionni uz ichiga olgan holda sub-layer hisoblanadi.
+
+Serial va Parallel orasida qanday farq bor?
+  -> bu ikkila usulham layerlarni pipeline desak buladi. yani serial - ikkala sub-layerlar alohida ishlaydi. birinchi attention layer keyin FFN layer. a parallel - ikkala layerlar bir vaqtda teng ishlaydi
+
+Nima uchun RELU eskirgan?
+  -> LLM da uncha yaxshi hisoblanmaydi chunki SwiGLU - LLM da eng modern va yaxshi activation function hisoblanadi
+
+MHA va MQA?
+  -> MHA - har bir query uchun alohida key va value yasaydi. natijada ogir va sekin. a MQA - multi yani bitta query uchun faqat bitta key va value oladi. tez lekin natija jihatdan yaxshimas
+
+MQA vs GQA?
+  -> MQA - aytib utilingandek tezu lekin "kuchli" emas. a GQA eng yaxshi variantlardan bittasi hisoblanadiki chunki, u query uchun key va valuelarni group buyicha ajratib bajaradi.
+
+Distributive Representation nima?
+  -> embedidngsdan chiqqan vectorlarni ichidagi bitta vector qiymat - hechnimani bildirmaydi yani bir mano bermaydi. vectorlar model dimensionalga qarab hammasi birgalikda objectning bir manosini beradi
+
+Reasoning nima?
+  -> muammoni tugridan tugri yechish emas balki step-by-step tahlil qilib yechish qobilyat
