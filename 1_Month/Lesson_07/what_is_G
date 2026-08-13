@@ -1,0 +1,10 @@
+G -- tokenni oldi bush ekanini bildiradi (space)
+Yani, suzni oldida space bulsa, unga automatic ravishda 'G' qushiladi. Aks holda qushilmaydi
+
+"My name is Ali. I live in Korea"
+
+--> ['My', 'Gname', 'Gis', 'GAli', '.', 'GI', 'Glive', 'Gin', 'GKorea']
+
+My --> oldida space yuq
+Gname, Gis, GAli..... --> oldida space bor
+. --> oldida space yuq
