@@ -1,0 +1,39 @@
+1. LM(Language Model) nima?
+  - LM keyingi tokenni qanday topadi?
+  - Next word prediction va next token prediction orasida asosiy farq nima?
+
+2. Embedding nima?
+  - Embedding text ni qanday qilib vector kurinishiga utkizadi?
+  - Distributed representation da nimaga vectorni bitta qiymatiga qarab suzni manosini aniqlomidi?
+
+3. Transformer ni asosiy layerlari qaysilar?
+  - Attention layer va FFN layer ni vazifalari qanday farq qiladi?
+  - Nima uchun Transformerda Attention va FFN ikkalasiyam kerak?
+
+4. Tokenization qanday ishlaydi?
+  - Token va word orasida qanday farq bor?
+  - BPE uzun, notanish yoki hato yozillgan suzlarni qanday qilib model tushunadigon tokenlarga ajratadi?
+
+5. Activation Function nima?
+  - GELU va SwiGLU orasida qanday farq bor?
+  - Nimaga modern LLM larda ReLu urniga SwiGLU kabi activation functionlar ishlatiladi?
+
+6. Normalization nima degani?
+  - LayerNorm va RMSNorm orasidagi asosiy farq nimada?
+  - Nimaga modern LLM larda RMSNorm kuproq ishlatiladi?
+
+7. Training Stability nima?
+  - Exploding Gradients training jarayonida qanday muammolar keltirishi mumkin?
+  - Training jarayonida loss qiymatiga qarab Exploding Gradients yuz berganini qanday bilamiz?
+
+8. Hugging Face nima?
+  - GPT-2 repository ichida tokenizer.json, tokenizer_config.json va model.safetensors filelarni vazifasi nima?
+  - vocab.json va merges.txt BPE tokenization jarayonida qanday ishlaydi?
+
+9. LLM training da Hyperparameter lar qaysilar?
+  - Learning Rate, Batch Size va Optimizer training ga qanday tasir qiladi?
+  - LR Scheduler, Warm-up va Gradient Clipping lar training ni qanday qilib stabil qiladi?
+
+10. Local LLM qayerda ishlaydi?
+  - Model parameterlari va quantization darajasi Local LLM ni VRAM talabiga qanday tasir qiladi?
+  - model ni local GPU buyicha trade-off larini qanday baholaydi?
