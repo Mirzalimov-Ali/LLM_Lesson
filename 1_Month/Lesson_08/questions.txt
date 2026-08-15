@@ -1,6 +1,6 @@
-1. LM(Language Model) nima?
-  - LM keyingi tokenni qanday topadi?
-  - Next word prediction va next token prediction orasida asosiy farq nima?
+1. Hugging Face nima?
+  - GPT-2 repository ichida tokenizer.json, tokenizer_config.json va model.safetensors filelarni vazifasi nima?
+  - vocab.json va merges.txt BPE tokenization jarayonida qanday ishlaydi?
 
 2. Embedding nima?
   - Embedding text ni qanday qilib vector kurinishiga utkizadi?
@@ -26,9 +26,9 @@
   - Exploding Gradients training jarayonida qanday muammolar keltirishi mumkin?
   - Training jarayonida loss qiymatiga qarab Exploding Gradients yuz berganini qanday bilamiz?
 
-8. Hugging Face nima?
-  - GPT-2 repository ichida tokenizer.json, tokenizer_config.json va model.safetensors filelarni vazifasi nima?
-  - vocab.json va merges.txt BPE tokenization jarayonida qanday ishlaydi?
+8. LM(Language Model) nima?
+  - LM keyingi tokenni qanday topadi?
+  - Next word prediction va next token prediction orasida asosiy farq nima?
 
 9. LLM training da Hyperparameter lar qaysilar?
   - Learning Rate, Batch Size va Optimizer training ga qanday tasir qiladi?
