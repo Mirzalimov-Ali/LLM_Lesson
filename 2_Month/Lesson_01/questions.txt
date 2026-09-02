@@ -1,1 +1,12 @@
+Follow-Up savollar:
 
+1. Katta bir model yasamoqchi bulsa, GPU yoki TPU dan qaysi birinini tanlash muhim va nimaga?
+2. Agar Colab ni VS Codega ulamasak LLM model yasashda qanday muammolarga uchraymiz?
+3. Yasagan modelni qanday qilib baholaymiz? Va uni qanday qilib API yoki local serverda ishlatamiz?
+4. Data preprocessing da duplicate datalarni olib tashlash kerak, nima uchun olib tashlanadi?
+5. LLM Modelni yasash uchun qancha va qanday datalar kerak buladi?
+6. Nima uchun modelni training qilishdan oldin datani Token ID va Sequences ga aylantirish kerak?
+7. Modelni pretraining qilish uchun GPU dan foydalanish shartmi?
+8. Pretraining va Post-training orasidagi asosiy farq nimada?
+9. LLM Modelni parameterini va architecturesini qanday tanlaymiz?
+10. LLM Model training bulyatkan jarayonda Loss va Perplexity nimani kursatadi?
