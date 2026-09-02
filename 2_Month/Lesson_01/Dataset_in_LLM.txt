@@ -1,0 +1,3 @@
+LLM model yasash uchun datasetni qayerdan topamiz?
+
+-->> LLM model uchun datasetni Hugging Face, Kaggle, GitHub kabi pratformalardan topsak buladi
