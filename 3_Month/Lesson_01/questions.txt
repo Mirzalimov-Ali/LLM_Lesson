@@ -1,0 +1,66 @@
+@ Qo'shimcha savollar
+
+1. Post-training nima ekanini bir jumlada .
+--> Modelni savollarga yaxshi javob berishga urgatish jarayoni
+
+2. Pre-training va post-training farqini uchta o‘lchov bo‘yicha .
+--> Maqsad:   Pre-training -- tilni ourganish, post-training -- javob berishni urganish
+     Malumot:  Pre-training -- kup matnlar,    post-training -- savol-javoblar
+     Natija:      Pre-training -- Base model,     post-training -- Instruct model
+
+3. Base model nega javob bera olmasligini tushuntiring
+--> Javob bera oladi, lekin savollarga tugri va foydali javob berishga urgatilmagan buladi
+
+4. SFT, RLHF va DPO qaysi ma'lumot turini talab qiladi?
+--> SFT: Savol va tugri javob.
+     RLHF: odamlarni javoblarga bergan bahosi.
+     DPO: Yaxshi va yomon javob juftligi.
+
+5. LoRA — SFT ga alternativa EMASligini tushuntira olasizmi?
+--> SFT -- urgatish usuli, LoRA esa modelni kamroq memory bilan urgatish usuli. Ularni birga ishlatsa buladi
+
+6. Qaysi metod Colab T4 da ishlashini va nega ishlamasligini bilasizmi?
+--> QLoRA va SFT ishlashi mumkin, chunki bular kamroq memory ishlatadi. Tuliq urgatish esa 16 GB VRAMga sigmashligi mumkin
+
+7. Colab’da base modelni yuklab, undan javob ola olasizmi?
+--> Ha javob olish mumkin. Lekin u savollarga har doim tugri javob bermashligi mumkin
+
+
+@ Interview savollar - Easy
+
+1. Post-training nima? Bir jumlada tushuntiring.
+--> Modelni savollarga yaxshi javob berishga urgatish jarayoni
+
+2. Pre-training va post-training o‘rtasidagi asosiy farq nima?
+--> Pre-training tilni urgatadi, post-training esa javob berishni yaxshilaydi
+
+3. SFT nimaning qisqartmasi va qanday ma'lumot talab qiladi?
+--> SFT (Supervised Fine-Tuning). Savol va tugri javob juftligini talab qiladi
+
+4. Base model va instruct model o‘rtasidagi farq nima?
+--> Base model keyingi suzni bashorat qiladi. Instruct model esa kursatmalarga amal qilib javob beradi
+
+
+@ Interview savollar - Medium
+
+5. Nega SFT’da loss faqat javob (response) tokenlariga hisoblanadi?
+--> Chunki model savolni emas, savolga qanday javob berishni o‘rganishi kerak
+
+6. LoRA — SFT ga alternativami? Javobingizni izohlang.
+--> Yo‘q. SFT modelni urgatadi, LoRA esa uni kamroq memory bilan urgatishga yordam beradi
+
+7. DPO RLHF’dan qaysi komponentni olib tashlaydi va nega bu muhim?
+--> DPO alohida reward modelni va RL bosqichini talab qilmaydi. Shuning uchun urgatish osonroq buladi
+
+
+
+@ Interview savollar - Hard
+
+8. 16GB VRAM va 2000 ta instruction juftlik bor. 7B modelni qanday post-train qilasiz va nega?
+--> QLoRA bilan SFT qilaman. Chunki bu kamroq xotira ishlatadi va 2000 ta savol-javob orqali modelni o‘rgatish mumkin
+
+9. Post-training’dan keyin model yangi vazifada yaxshi, eski vazifada yomonlashdi. Bu nima deb ataladi va qanday aniqlaysiz?
+--> Bu Catastrophic Forgetting deyiladi. Urgatishdan oldin va keyin eski vazifalar buyicha test qilib, natijalarni solishtiraman
+
+10. Kompaniya modeldan doim JSON formatda javob so‘raydi. SFT, DPO yoki prompt engineering — qaysi birini tanlaysiz va nega?
+--> Avval prompt engineeringni tanlayman. Chunki modelga JSON formatida javob berishni kursatma orqali aytish mumkin, qayta urgatish shart emas
