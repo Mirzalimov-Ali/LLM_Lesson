@@ -1,0 +1,40 @@
+@ Interview savollar - Easy
+
+1. SFT nimaning qisqartmasi va qanday ma’lumot talab qiladi?
+--> SFT -- Supervised Fine-Tuning. Savol va unga mos tugri javoblar kerak buladi
+
+2. Chat template nima va u nega kerak?
+--> Chat template -- xabarlarni model tushunadigan shaklda joylashtirish usuli. U kim savol berganini, kim javob berayotganini va suhbat qachon tugashini kursatadi
+
+3. SFT’da qanday loss funksiyasi ishlatiladi?
+--> Cross-Entropy Loss. Bu model ni javobi tugri javobdan qanchalik farq qilishini ulchaydi
+
+4. Alpaca va ShareGPT formatlarining farqi nima?
+--> Alpaca odatda instruction, input va output maydonlaridan iborat buladi. ShareGPT esa suhbatni bir nechta xabar sifatida saqlaydi 
+     "ex) kim gapirdi va nima dedi"
+
+
+@ Interview savollar - Medium
+
+5. Nega labels’da -100 ishlatiladi va u qaysi tokenlarga qo‘yiladi?
+--> -100 quyilgan tokenlar uchun model ni xatosi hisoblanmaydi. Odatda savol qismiga -100 quyiladi, chunki model savolni takrorlashni emas, unga javob berishni urganishi kerak buladi
+
+6. SFT’dan keyin ham model to‘xtamayapti. Uchta mumkin sababini ayting.
+--> EOS tokeni tugri urgatilmagan bulishi mumkin
+     Chat template notugrii ishlatilgan bulishi mumkin
+     Generatsiyada eos_token_id yoki tuxtash sozlamasi notugri bulishi mumkin
+
+7. SFT’da learning rate nega pre-training’dagidan ancha past?
+--> Chunki model oldin kup narsani urgangan. SFT da shu bilimlarni buzmasdan, modelni kerakli vazifaga moslashtirish kerak. Learning rate katta bulsa, model oldingi bilimlarini yuqotishi mumkin
+
+
+@ Interview savollar - Hard
+
+8. 0.5B modelni T4’da full SFT qilish uchun xotirani hisoblang. 7B uchun nima o‘zgaradi?
+--> P16 da faqat model ogirliklari 0.5B uchun taxminan 1 GB, 7B uchun 14 GB joy oladi. Lekin full SFT da gradientlar, optimizer va boshqa malumotlarham xotira oladi. Shuning uchun 0.5B ancha oson ishlaydi, 7B esa T4 ning 16 GB VRAMiga odatda sigmaydi
+
+9. Kompaniya modelga yangi mahsulot ma’lumotlarini SFT orqali o‘rgatmoqchi. Qanday xavf bor va nimani tavsiya qilasiz?
+--> Mahsulot malumotlari uzgarsa, model eski malumot bilan javob berishi yoki yangi malumotni notugri u rganishi mumkin. Shuning uchun tez-tez yangilanadigan ma’lumotlar uchun RAG tavsiya qilaman. RAG kerakli ma’lumotni hujjatlardan topib, javob berishda ishlatadi.
+
+10. Train loss tushmoqda, eval loss ko‘tarilmoqda, lekin javoblar yaxshilanmoqda. Nima bo‘lyapti va qaysi checkpoint’ni tanlaysiz?
+--> Model urgatish malumotlarini yaxshi urganadi, lekin yangi malumotlarda xatolari kupayadi. Bu overfitting bulishi mumkin. Javoblarni test qilib, amalda eng yaxshi natija bergan checkpoint ni tanlaymiz. Faqat lossga qarab qaror qilinmaydi
