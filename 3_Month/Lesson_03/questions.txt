@@ -71,3 +71,29 @@
 --> Loss Masking - qaysi tokenlar uchun xato hisoblanishini belgilaydi. 
                        Ex, savol tokenlari hisobga olinmaydi, javob tokenlari esa hisoblanadi. 
      Cross-Entropy Loss - model bashorat qilgan token bilan tugri token orasidagi xatoni ulchaydi
+
+21. SFT next word prediction dan foydalanadimi? Tokenizationdanchi?
+--> Ha, ikkalasidan ham foydalanadi. Tokenization matnni tokenlarga ajratadi. Keyin model oldingi tokenlarga qarab keyingi tokenni bashorat qiladi va tugri javobni urganadi
+
+22. SFT architeturasini gapirib bering?
+--> Training data (instructions) → SFT Tokenization → Model Predicts next token 
+     → Loss calculation (accuracy of predicted token and actual token) → Backpropagation (Gradients) 
+     → Update parameters → The sequence repeats many times
+
+23. SFT data formatlari xaqida gapiring?
+--> Alpaca - kursatma, qushimcha malumot va javob shaklida saqlanadi
+     ShareGPT - suhbatni foydalanuvchi va yordamchi xabarlari shaklida saqlaydi
+     Message - har bir xabarda kim gapirayotgani (role) va nima yozilgani (content) kursatiladi
+     Prompt-completion - prompt savol yoki topshiriqni, completion esa model berishi kerak bulgan javobni bildiradi
+
+24. Cross entropy Loss SFT da qanday xisoblanadi?
+--> Model har bir javob tokenini bashorat qiladi. Bashorat tugri token bilan solishtiriladi va xato hisoblanadi. 
+     Xatolar urtachasi loss buladi. Loss qancha kichik bulsa, model urgatish javoblariga shuncha mos keladi
+
+25. Medical chatbot SFT pipeline?
+--> Ishonchli medical savol-javoblarni yigish
+     Malumotlarni doctorlar yordamida tekshirish va tozalash
+     Malumotlarni tokenlarga ajratish
+     Tayyor modelni SFT bilan urgatish
+     Medical mutaxassislar yordamida javoblarni tekshirish
+     Xavfsizligini sinash va yaxshi ishlasa, foydalanish
