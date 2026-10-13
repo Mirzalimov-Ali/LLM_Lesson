@@ -1,0 +1,73 @@
+1. EOS nima?
+--> Matn yoki javob tugaganini bildiradigan maxsus token
+
+2. Pretraining va Post training ni qanday farqi bor?
+--> Pre-training - Modelga til va matn qoidalarini urgatish
+     Post-training - Berilgan savolga aniq javob berishni urgatish
+
+3. Pretraining va Post trainingni 1 tadan oson va qiyinchilik tomonlarini sanang
+--> Pre-training: Oson tomoni - kup tayyor matn topish mumkin. 
+                      Qiyin tomoni - juda kup malumot va kuchli computer kerak buladi
+
+     Post-training: Oson tomoni - tayyor modeldan boshlanadi
+                       Qiyin tomoni - sifatli savol-javoblar tayyorlash va modelni tigri urgatish kerak
+
+4. Base vs Instruct model
+--> Base model: Matnni davom ettirishga urgatilgan, savolga har doimham tugri javob bermaydi
+     Instruct model: Kursatmalarga amal qilish va savollarga javob berish uchun qushimcha urgatilgan
+
+5. DPO nima?
+--> Modelga ikkita javobdan qaysi biri yaxshiroq ekanini kursatuvchi malumotlar orqali urgatish usuli
+
+6. RLHF nima?
+--> Model ni javoblarini odam baholari asosida yaxshilash usuli. Model odamlar maqul kurgan javoblarni berishga urgatiladi
+
+7. SFT nima?
+--> Model ni tayyor savol va tugri javoblar orqali urgatish usuli
+
+8. LORA nima?
+--> Model ni barcha parametrlarini emas, faqat kichika qushimcha qismini urgatish usuli. Bu xotirani economy qiladi
+
+9. SFT vs LORA?
+--> SFT - Model ni qanday urgatishni bildiradi
+     LoRA - Model ni kamroq parametrni uzgartirib urgatishni bildiradi
+
+10. RLHF vs DPO?
+--> RLHF: Inson baholari ishlatiladi, odatda reward model va qushimcha urgatish bosqichlari kerak
+     DPO: Yaxshi va yomonroq javob juftliklari orqali tugridan-tugri urgatiladi, alohida reward model kerak emas
+
+11. Full SFT vs LORA?
+--> Full SFT: Modelning barcha urgatiladigan parametrlarini yangilaydi. Kuproq xotira va hisoblash quvvati kerak buladi
+     LoRA: Faqat kichik qushimcha parametrlarni urgatadi. Kamroq xotira talab qiladi 
+
+12. Base Model malumotlarni biladi lekin nima uchun yaxshi javob bermaydi
+--> Chunki Base model asosan matnni davom ettirishga urgatilgan. U savolga aniq va foydali javob berishga maxsus urgatilmagan
+
+13. LORA ni SFT ni o’rniga ishlatsak boladimi?
+--> Yuq! SFT - modelni urgatish usuli, LoRA esa kamroq parametrni uzgartirib urgatish usuli. Bular bir-birini urnini bosomidi
+
+14. SFT va LORA ni birdaniga ishlatsak boladimi?
+--> Ha, SFT orqali modelni savol-javoblar bilan urgatamiz, LoRA orqali esa buni kamroq xotira bilan bajaramiz
+
+15. Post training Pipeline qanday?
+--> Training data → Modelga beramiz → Model bergan javobni oldindan berilgan ideal javob bilan solishtiriladi 
+     → loss calculate → DPO/RLHF – Turli javoblarni ichida afzal kuriladigon javobni tanlashni urgatadi
+
+16. Knowledge problem va behavior problem?
+--> Knowledge problem - model kerakli malumotni bilmaydi. 
+     Behavior problem - malumotni biladi, lekin savolga yaxshi javob berolmaydi
+
+17. Limited GPU budget: Full FT, LoRA, or QLoRA?
+--> QLoRA, chunki u modelni 4-bitda saqlab, xotirani kam ishlatadi. LoRA ham kam xotira ishlatadi, Full FT esa kuproq GPU xotirasini talab qiladi
+
+18. Qanday qilib Post Trainingni baxolaymiz?
+--> Modelga test savollarini berib, javoblarining tugriligi, foydaliligi va kursatmalarga amal qilishini tekshiramiz. Urgatishdan oldingi va keyingi natijalarni solishtiramiz
+
+19. Behaviour Clonning va Teacher Forcing ni qanday farqi bor?
+--> Behavior Cloning - model ni insonning harakatlarini misollar orqali urgatish usuli 
+     Teacher Forcing - modelni training jarayonida unga oldingi haqiqiy tokenlarni berib, keyingi tokenni bashorat qilishni urgatish usuli
+
+20. Loss Masking va Cross Entropy Loss larni SFT dagi o’rni?
+--> Loss Masking - qaysi tokenlar uchun xato hisoblanishini belgilaydi. 
+                       Ex, savol tokenlari hisobga olinmaydi, javob tokenlari esa hisoblanadi. 
+     Cross-Entropy Loss - model bashorat qilgan token bilan tugri token orasidagi xatoni ulchaydi
