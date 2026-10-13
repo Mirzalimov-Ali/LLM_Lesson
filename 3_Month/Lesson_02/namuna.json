@@ -1,0 +1,242 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Python va JavaScript tillarini taqqoslab ber."
+      },
+      {
+        "role": "assistant",
+        "content": "Python suniy intellektda kop ishlatiladi. JavaScript esa veb-saytlarni interaktiv qilishda keng qollaniladi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Python da ikkita sonni qoshadigan kod yoz."
+      },
+      {
+        "role": "assistant",
+        "content": "a = 5\nb = 3\nprint(a + b)"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Har kuni 2 soat ingliz tili organib, bir haftada necha soat shugullanaman?"
+      },
+      {
+        "role": "assistant",
+        "content": "2 × 7 = 14 soat. Bir haftada jami 14 soat shugullanasiz."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Imtihonga tayyorlanish uchun qanday reja tuzsam boladi?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mavzular royxatini tuzing. Har kuni bir nechta mavzuni organing, test ishlang va qiyin mavzularga koproq vaqt ajrating."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nima uchun modelni oqitishdan oldin malumotlarni tozalash kerak?"
+      },
+      {
+        "role": "assistant",
+        "content": "Notogri, takroriy yoki keraksiz malumotlar modelni chalgitishi mumkin. Tozalangan malumotlar modelning yaxshiroq organishiga yordam beradi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Agar Python kodim xato bersa, nima qilishim kerak?"
+      },
+      {
+        "role": "assistant",
+        "content": "Xato xabarini oqing, xato korsatilgan qatorni tekshiring va qavslar hamda ozgaruvchilar nomi togri yozilganiga ishonch hosil qiling."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Suniy intellekt insonlarning barcha ishlarini egallab oladimi?"
+      },
+      {
+        "role": "assistant",
+        "content": "Barcha ishlarni egallab olishi aniq emas. Suniy intellekt ayrim vazifalarni avtomatlashtiradi va koplab kasblarni ozgartirishi mumkin."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Modelni oqitish va test qilish ortasidagi farq nima?"
+      },
+      {
+        "role": "assistant",
+        "content": "Oqitishda model malumotlardan organadi. Test qilishda esa yangi malumotlar orqali uning qanchalik yaxshi ishlashi tekshiriladi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dasturlashni endi boshlayotgan dostimga qanday maslahat berasan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Python kabi sodda tildan boshlasin. Har kuni kod yozsin, xatolaridan organib, kichik loyihalar yaratsin."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quyidagi kod nima chiqaradi: print(4 * 3 + 2)?"
+      },
+      {
+        "role": "assistant",
+        "content": "14 chiqaradi. Avval 4 × 3 = 12, keyin 12 + 2 = 14."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nima uchun LLM bazan notogri malumot beradi?"
+      },
+      {
+        "role": "assistant",
+        "content": "LLM bazan notogri xulosa chiqarishi yoki ishonchli koringan, ammo yolgon malumot yaratishi mumkin."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Menga 3 kunlik oddiy mashq rejasini tuzib ber."
+      },
+      {
+        "role": "assistant",
+        "content": "1-kun: 20 daqiqa yurish. 2-kun: yengil mashqlar va chozilish. 3-kun: 25 daqiqa yurish. Mashqlarni jismoniy holatingizga moslang."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Internet va veb-sayt bir xil narsami?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yoq. Internet qurilmalarni boglaydigan global tarmoq. Veb-sayt esa internet orqali brauzerda ochiladigan sahifalar toplami."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Royxatdagi eng katta sonni Python da qanday topaman?"
+      },
+      {
+        "role": "assistant",
+        "content": "sonlar = [4, 9, 2, 15, 7]\nprint(max(sonlar))"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nega datasetni train va test qismlariga ajratamiz?"
+      },
+      {
+        "role": "assistant",
+        "content": "Modelni oqitish va uning yangi malumotlardagi natijasini tekshirish uchun datasetni ajratamiz. Test malumotlari oqitishda ishlatilmasligi kerak."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "120 ta malumotning 80 foizi train uchun ajratilsa, nechta malumot qoladi?"
+      },
+      {
+        "role": "assistant",
+        "content": "120 × 0.8 = 96 ta train malumoti boladi. Qolgan 24 ta malumot test uchun qoladi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ertaga muhim taqdimotim bor, lekin hayajonlanyapman. Nima qilay?"
+      },
+      {
+        "role": "assistant",
+        "content": "Taqdimotni bir necha marta mashq qiling. Asosiy fikrlarni yozib oling, sekin nafas oling va tushunarli gapirishga etibor bering."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "SFT va pre-training ortasidagi asosiy farqni tushuntir."
+      },
+      {
+        "role": "assistant",
+        "content": "Pre-training da model katta hajmdagi matnlardan til qonuniyatlarini organadi. SFT da esa savol-javob namunalari orqali kerakli tarzda javob berishga orgatiladi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Suvning harorati 20 darajadan 65 darajagacha kotarildi. Harorat necha gradusga oshdi?"
+      },
+      {
+        "role": "assistant",
+        "content": "65 - 20 = 45. Suvning harorati 45 gradusga oshdi."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Kelajakda AI dasturchisi bolish uchun nimalarni organishim kerak?"
+      },
+      {
+        "role": "assistant",
+        "content": "Avval Python va algoritmlarni organing. Keyin matematika, malumotlar bilan ishlash, machine learning va deep learning asoslarini organing. Amaliy loyihalar yarating."
+      }
+    ]
+  }
+]
