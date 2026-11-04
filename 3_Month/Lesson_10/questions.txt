@@ -1,0 +1,44 @@
+1. What is RLHF, and what are its main stages?
+   --> RLHF - modelni inson fikri asosida yaxshilash usuli
+
+   Asosiy bosqichlari:
+   1. SFT - modelga tugri javob berishni urgatish
+   2. Reward Model - javoblarni baholashni urgatish
+   3. PPO - modelni yaxshi javob berishga u  rgatish
+
+2. What do Chosen and Rejected responses mean?
+   --> Chosen - yaxshi deb tanlangan javob
+   --> Rejected - yomonroq deb tanlangan javob
+
+3. What is the role of a Reward Model?
+   --> Reward Model javoblarni baholaydi va har bir javobga ball beradi. Yaxshi javobga yuqori, yomon javobga past ball beradi
+
+4. Explain the Bradley–Terry loss. Why does only the reward difference matter?
+--> Bradley–Terry Loss - Chosen javobning Rejected javobdan yaxshiroq bulish ehtimolini hisoblaydi
+     Faqat reward farqi muhim, chunki bu farq qaysi javob yaxshiroq ekanini kursatadi
+
+5. Why does PPO use a clipped objective?
+---> Clipped Objective model ni bir qadamda juda katta uzgarib ketmasligi uchun ishlatiladi
+
+6. What are the Reference Model and the KL penalty for?
+--> Reference Model - yangi modelni oldingi model bilan solishtirish uchun ishlatiladi
+     KL Penalty - yangi modelning oldingi modeldan juda uzoqlashib ketmasligini taminlaydi
+
+7. Which models are in GPU memory during PPO-based RLHF, compared with DPO?
+---> PPO - Policy Model, Reference Model, Reward Model va Value Model
+      DPO - Policy Model va Reference Model
+      Shuning uchun DPO kamroq GPU xotirasi talab qiladi
+
+8. What is reward hacking? Give an example and two mitigations.
+---> Reward Hacking - model yaxshi ball olish uchun notugri yul tutishi
+      Ex: model foydali javob berishti urniga, uzun javob yozib yuqori ball olishga harakat qiladi
+      Oldini olish:
+      - Reward Modelni sifatli malumotlar bilan uqitish
+      - Model javoblarini inson tomonidan tekshirish
+
+9. When would you choose DPO over PPO-based RLHF, and vice versa?
+---> DPO - oddiyroq uqitish va kamroq GPU xotirasi kerak bulganda
+      PPO - murakkabroq uqitish va reward orqali modelni boshqarish kerak bulganda
+
+10. How is DPO mathematically related to KL-regularized RLHF?
+---> DPO - KL bilan cheklangan RLHF asosida yasalgan usul. U alohida Reward Model va PPO ishlatmasdan, Chosen va Rejected javoblar orqali modelni tugridan-tugri uqitadi
