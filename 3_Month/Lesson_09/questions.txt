@@ -1,0 +1,32 @@
+1. Qwen 2.5-0.5B bu yerda 2.5 va 0.5B nima?
+   - 2.5 - modelning versioni
+   - 0.5B - modelda taxminan 500 millionta parameter borligini bildiradi
+
+2. SFT ni qanday usullar bn rivojlantiramiz?
+   - Training data sifatini yaxshilash
+   - Kuproq va sifatli malumot qushish
+   - Epoch sonini oshirish
+   - LoRA yoki QLoRA parameterlarini sozlash
+
+3. SFT va DPO ni training data jixatidan  qanday farq qiladi?
+   - SFT - Savol va unga tugri javob beriladi.
+   - DPO - Bitta savolga ikkita javob beriladi, yaxshi (chosen) va yomon (rejected). Model yaxshi javobni tanlashni urganadi
+
+4. SFT da loss nima uchun faqat assitent javoblarga qoyiladi prompt tokenlarga emas?
+   - Chunki modelga savolni qayta yozishni emas, savolga tugri javob berishni urgatamiz. Prompt esa kontekst sifatida ishlatiladi.
+
+5. Nima uchun Full FT ni orniga Lorani ishlatdik?
+   - Full Fine-Tuning barcha parameterlarni uzgartiradi va kuproq GPU xotirasi talab qiladi. LoRA esa faqat kichik qushimcha parameterlarni urgatadi. Shuning uchun tezroq va kamroq xotira talab qiladi
+
+6. Built_sft dagi Held_Out royhati nima uchun kerak?
+   - Bu royxatdagi malumotlar trainingga qushilmaydi. Modelni uqitishdan keyin uni yangi savollarga qanday javob berishini tekshirish uchun saqlanadi
+
+7. DPO uchun base xolat qaysi(Qayerdan boshlaydi), SFT dachi>
+   - SFT - Base modeldan boshlaydi
+   - DPO - SFT bilan uqitilgan modeldan boshlaydi
+
+8. Agar DPO ni ishlatsak foydalanayotganimizda model 2 ta javobdan birini tanlab beradi bu jarayonni biz koramizmi?
+   - Yuq. DPO training paytida modelga ikkita javob solishtiriladi va qaysi biri yaxshiroq ekanligi urgatiladi. Oddiy foydalanishda esa model bitta javob yasaydi. Ikkita javobdan tanlash jarayoni foydalanuvchiga kurinmeydi
+
+9. 9 chi darsgacha eng qiziq darsimizda/darsdan tashqari o’rgangan bilimiz nima boldi?
+   - Men PEFT (Parameter-Efficient Fine-Tuning) haqida ozgina urgandim. Bu usulda modelning barcha parameterlarini qayta uqitish shart emas. Faqat kerakli kichik qismini uzgartirish orqali modelni yangi vazifaga moslashtirish mumkin. Bu vaqt, GPU xotirasi va hisoblash resurslarini tejaydi
