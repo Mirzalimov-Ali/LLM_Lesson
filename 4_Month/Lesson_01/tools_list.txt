@@ -1,0 +1,15 @@
+GitHub – loyiha yuklash, portfolio yasash, dataset olish, boshqa projectlarni korish va jamoaviy ishlash uchun. loyihalarni copy qilish mumkin
+
+Git – codelar uzgarishini nazorat qilish, versionni saqlash va oldingi holatga qaytish uchun. GitHub ga code yuklash, version conflictlarni yechish, virtual muhit yasash etc.
+
+Hugging Face – tayyor AI modellar, datasetlar olish, modellarni yuklash va deploy uchun. LLM ni markazi.
+
+Kaggle – datasetlar topish, ML competitionlarida qatnashish va GPU orqali modellarni train qilish uchun.
+
+Roboflow – Computer Vision uchun dataset yigish, belgilash (annotation) va tayyorlash uchun.
+
+Google Colab – Python codelarini cloud environmentda ishga tushirish va GPU/TPU orqali modellarni train qilish uchun.
+
+Docker – project va uning kutubxonalarini container ichiga joylash, turli computerlarda bir xil ishlashini taminlash uchun.
+
+Ollama – LLM modellarni local computerda yuklash va ishga tushirish uchun.
