@@ -1,0 +1,45 @@
+Savollar:
+
+1. Server va Serverless nima farqi va oxshashlik Tomoni bor
+---> Farqi - Server infratuzilmasini uzimiz boshqaramiz. Serverless da esa infratuzilmani Cloud Provider boshqaradi.
+      Oxshash tomoni - Ikkalasi ham application va service larni internet orqali foydalanuvchilarga yetkizib berish uchun ishlatiladi.
+
+2. Server va GPU ni qanday bogliqlik Tomoni bor?
+---> Server - bu application va modelni ishga tushiradigan system. GPU esa server ichida joylashishi mumkin bulgan hardware, AI model hisob-kitoblarini tezlashtiradi. Yani GPU server ning bir qismi sifatida ishlashi mumkin.
+
+3. vLLM va llama.cp va Transformers bularni nimalar va nima vazifani bajaradi?
+---> vLLM - LLM modellarini GPU yordamida tez va effective ishga tushirish hamda foydalanuvchilarga API orqali ishlatish uchun kerak tool.
+      llama.cpp - LLM modellarni CPU va GPU orqali ishga tushirishga yordam beradigan lightweight framework. Ayniqsa local deployment uchun qulay.
+      Transformers - Hugging Face tomonidan ishlab chiqilgan library. Modelni yuklash, training qilish, fine-tuning va inference uchun ishlatiladi.
+
+4. API va Application logic nima?
+---> API - Turli application va system lar bir-biri bilan malumot almashishi uchun xizmat qiladigan interface.
+      Application Logic - Application qanday ishlashini belgilaydigan asosiy qoidalar va jarayonlar. (ex: user savolini qabul qilish, tekshirish va modelga yuborish)
+
+5. LLM Engineer LLM model training qilishdan tashqari yana qaysi ishlarni qiladi
+---> LLM Engineer model ni tanlash, fine-tuning, evaluation, optimization, inference, deployment va monitoring ni ham qiladi. Bundan tashqari, API yasash, RAG integrationi va model ni real application bilan ulash ishlarini bajaradi.
+
+6. API key yasashda nimalarga etibor berish kerak
+---> API Key maxfiy saqlanishi va hech kimga kursatmashi kerak. Unga kerakli permission va usage limit belgilash, environment variables orqali saqlash va muntazam ravishda rotate qilish muhim.
+
+7. Modelga userlar qaysi yollar orqali kirishlari mumkin
+---> Web UI - Browser orqali web application dan foydalanish.
+      Mobile App - Telefon application orqali foydalanish.
+      API - Boshqa application yoki system orqali modelga request yuborish.
+      CLI - Terminal orqali model bilan ishlash.
+
+8. Inference vs Training
+---> Training - Modelga dataset orqali urgatish, yani model ni parameterlarini yangilash jarayoni.
+      Inference - Training qilingan modeldan foydalanib, user bergan input asosida prediction yoki response olish jarayoni.
+
+9. Deploymentni qandya turlari bor? Hybrid deployment qanday boladi?
+---> Cloud Deployment - Model Cloud Serverlarda ishlaydi.
+      On-premise Deployment - Asosan company lar ishlatadi. physical GPU office ga joylashkan buladi.
+      Edge Deployment - Model userga yaqin bulgan local device yoki hardware da ishlaydi.
+      Hybrid Deployment - Cloud va On-premise yoki local infratuzilma birgalikda ishlaydi. Masalan, maxfiy malumotlar local serverda, katta hisob-kitoblar esa Cloud da bajariladi.
+
+10. vLLM nima uchun birdaniga kop userlarga xizmat korsata oladi?
+---> vLLM Continuous Batching va PagedAttention yordamida bir vaqt da kup request larni qayta ishlaydi va GPU xotirasidan effective foydalanadi.
+
+11. RAG nimalarni tushundingiz?
+---> RAG - Model javob berishdan oldin tashqaridan savolga mos  malumot qidirib javobga qushish usul. Bunda topilgan malumot lar modelga context sifatida beriladi va model shu malumot larga asoslanib javob yasaydi.
