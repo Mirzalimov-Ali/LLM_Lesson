@@ -1,0 +1,23 @@
+Savollar:
+
+1. Full Fine tuning, LORA/QLORA, RAG, bular orasida qanday farq bor?
+---> Full Fine tuning
+       Model ni barcha parameter larini yangi dataset yordamida uzgartiradi.
+       Kup GPU xotira talab qiladi.
+
+---> LoRA
+       Tayyor model ni bir qushimcha parameter larini qismini uqitish usuli.
+       Model ni barcha parameter larini emas, faqat kichik qushimcha qismini urgatadi.
+       Full Fine tuning ga kamroq GPU xotira va vaqt talab qiladi.
+
+---> QLoRA
+       LoRA ni yanada kam resurs talab qiladigan turi.
+       GPU xotirasini ozroq ishlatadi. CPU da ham train qilish imkoni bor.
+       Asosiy model ni 4-bite kabi pas aniqlikda saqlaydi (Quantization).
+
+
+2. PDF da yana qanday usuldan foydalanishimiz mumkin? Qanday xolatda?
+---> pypdf - PDF ichidagi oddiy matnni ajratib olish.
+---> pdfplumber - matn bilan birga jadvallar va sahifa joylashuvini ajratish.
+---> PyMuPDF - matn va rasmlarni ajratish, PDF sahifalarini qayta ishlash.
+---> pytesseract + pdf2image - scaner qilingan, yani matni rasm kurinishida bulgan PDF file lardan OCR orqali matn olish.
